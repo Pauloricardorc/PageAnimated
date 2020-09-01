@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./js/anime.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/semantic.min.css">
+    <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="./js/semantic.min.js"></script>
+    <title>Projeto Animated</title>
+</head>
+<body>
+    <div class="container-center">
+        <div class="ui labeled button" onclick="funcAnimeted()" tabindex="0">
+            <div class="ui red button">
+                <i class="arrow-left icon"></i> Rotate 
+            </div>
+        </div>
+
+        <div class="animeted" id="teste" onClick="funcAnimeted()"></div>
+        <span class="text-intro text-animeted">H</span>
+        <span class="text-intro text-animeted">E</span>
+        <span class="text-intro text-animeted">L</span>
+        <span class="text-intro text-animeted">L</span>
+        <span class="text-intro text-animeted">O</span>
+    </div>
+
+    <script>
+        const funcAnimeted = () => {
+
+            var divAnimeted = document.getElementById('teste')
+            divAnimeted.style.transition = '0.3s'
+            divAnimeted.style.boxShadow = "0px 0px 50px #FFF8";
+            
+            divAnimeted.style.backgroundColor = '#03030a'
+            divAnimeted.style.boxShadow = "0px 0px 50px #03030a";
+
+            anime({
+                targets: '.animeted',
+                translateX: [0, 950],
+                rotate: [0, 360],
+                backgroundColor: '#FFF',
+                duration: 3000,
+                delay: [2000 , 3000],
+                direction: 'alternate',
+                loop: true,
+                easing: 'spring(1, 100, 50, 0)'
+            });
+
+            anime({
+                targets: '.text-animeted',
+                translateX: [0, 400],
+                direction: 'alternate',
+                loop: true,
+                delay: anime.stagger([1000 , 2000]),
+                easing: 'spring(1, 100, 50, 0)'
+                
+            })
+        }
+    </script>
+</body>
+</html>
