@@ -4,4 +4,4 @@
 
 <strong>Criando um site para aprender toda a biblioteca baixando todas os tipos de função e animação, para que quando eu for fazer um site real deixa ele mais animado e divertido.</strong>
 
-<p>Essa biblioteca que estou usando é a <a href="https://freefrontend.com/assets/img/anime-js-examples/anime-js-logo-animation.png">animejs</p>
+<p>Essa biblioteca que estou usando é a <a href="hhttps://animejs.com">animejs</p>
